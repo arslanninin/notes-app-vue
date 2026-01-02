@@ -3,6 +3,7 @@ import { useRouter } from "vue-router";
 import { useNotesStore } from "@/store/notes.store";
 
 import NoteList from "@/components/NoteList.vue";
+import CreateButton from "../components/CreateButton.vue";
 
 const store = useNotesStore();
 const router = useRouter();
@@ -11,7 +12,7 @@ function openNote(id) {
     router.push(`/edit/${id}`);
 }
 
-function createTestNote() {
+function createNote() {
     router.push("/edit");
 }
 </script>
@@ -20,9 +21,9 @@ function createTestNote() {
     <NoteList
         :notes="store.notes"
         @delete="store.deleteNote"
-        @create="createTestNote"
         @open="openNote"
     />
+    <CreateButton @click="createNote" />
 </template>
 
 <style scoped></style>

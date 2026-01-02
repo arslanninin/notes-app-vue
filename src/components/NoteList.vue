@@ -8,7 +8,7 @@ defineProps({
     },
 });
 
-const emit = defineEmits(["delete", "create", "open"]);
+const emit = defineEmits(["delete", "open"]);
 </script>
 
 <template>
@@ -17,5 +17,4 @@ const emit = defineEmits(["delete", "create", "open"]);
         <NoteCard :note="note" @open="emit('open', note.id)" />
         <button @click="emit('delete', note.id)">Delete</button>
     </div>
-    <button @click="emit('create')">Save</button>
 </template>
