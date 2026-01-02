@@ -3,6 +3,8 @@ import { ref, computed, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useNotesStore } from "@/store/notes.store";
 
+import EditorHeader from "../components/EditorHeader.vue";
+
 const route = useRoute();
 const router = useRouter();
 const store = useNotesStore();
@@ -64,11 +66,14 @@ function cancel() {
 </script>
 
 <template>
+    <EditorHeader @save="save" @cancel="cancel" />
     <div class="edit-note">
-        <h2>{{ existingNote ? "Edit note" : "New note" }}</h2>
-
         <div class="field">
-            <input v-model="title" placeholder="Title" />
+            <input
+                style="font-size: 28px; border: 0px"
+                v-model="title"
+                placeholder="Title note"
+            />
         </div>
 
         <div class="field">
@@ -82,12 +87,6 @@ function cancel() {
         <p v-if="error" class="error">
             {{ error }}
         </p>
-
-        <div class="actions">
-            <button @click="cancel">Cancel</button>
-
-            <button @click="save">Save</button>
-        </div>
     </div>
 </template>
 

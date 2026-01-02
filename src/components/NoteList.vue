@@ -11,7 +11,7 @@ defineProps({
 const emit = defineEmits(["delete", "open"]);
 </script>
 
-<template>
+<template class="flex w-screen">
     <p>All Notes</p>
     <div v-for="note in notes" :key="note.id">
         <NoteCard :note="note" @open="emit('open', note.id)" />
