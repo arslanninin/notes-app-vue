@@ -1,20 +1,18 @@
 <script setup>
+import { useRouter } from "vue-router";
 import { useNotesStore } from "@/store/notes.store";
 
 import NoteList from "@/components/NoteList.vue";
 
 const store = useNotesStore();
+const router = useRouter();
+
+function openNote(id) {
+    router.push(`/edit/${id}`);
+}
 
 function createTestNote() {
-    const now = new Date().toISOString();
-
-    store.addNote({
-        id: crypto.randomUUID(),
-        title: "Test note",
-        content: "This is a test note",
-        createdAt: now,
-        updatedAt: now,
-    });
+    router.push("/edit");
 }
 </script>
 
@@ -23,6 +21,7 @@ function createTestNote() {
         :notes="store.notes"
         @delete="store.deleteNote"
         @create="createTestNote"
+        @open="openNote"
     />
 </template>
 
