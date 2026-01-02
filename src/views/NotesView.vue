@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <router-view></router-view>
+    <div><p>NotesView</p></div>
 </template>
 
 <style scoped></style>
