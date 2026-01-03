@@ -13,7 +13,13 @@ const emit = defineEmits(["delete", "open"]);
 
 <template class="flex w-screen">
     <div class="flex flex-col gap-2">
-        <div v-for="note in notes" :key="note.id" class="flex">
+        <div v-if="notes.length === 0" class="flex items-center justify-center">
+            <p>
+                No notes found.<br />Create your first one by clicking the
+                button below.
+            </p>
+        </div>
+        <div v-else v-for="note in notes" :key="note.id" class="flex">
             <NoteCard :note="note" @open="emit('open', note.id)" />
 
             <button
