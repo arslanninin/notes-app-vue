@@ -144,5 +144,7 @@ pnpm preview   # Просмотр production build локально
 ---
 
 <div align="center">
+  
 Made with ❤️ by [arslanninin](https://github.com/arslanninin)
+
 </div>
