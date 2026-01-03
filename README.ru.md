@@ -1,8 +1,9 @@
 _[en](README.md) | **ru**_
 
 # 📝 Notes App Vue
-
 <div align="center">
+  
+![AppImage](https://repository-images.githubusercontent.com/1126858583/086fea43-74d6-46df-9de9-0b6d175b6a16)
 
 ![Vue.js](https://img.shields.io/badge/Vue.js-3.5-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-7.2-646CFF?style=for-the-badge&logo=vite&logoColor=white)
