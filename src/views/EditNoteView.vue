@@ -91,10 +91,6 @@ function cancel() {
 </template>
 
 <style scoped>
-.edit-note {
-    padding: 16px;
-}
-
 .field {
     margin-bottom: 12px;
 }

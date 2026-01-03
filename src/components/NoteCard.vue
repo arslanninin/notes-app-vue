@@ -11,7 +11,7 @@ const emit = defineEmits(["open"]);
 
 <template>
     <div
-        class="note-card w-full text-base bg-slate-200 rounded-xl flex flex-col items-start p-3 cursor-pointer"
+        class="note-card w-full text-base bg-slate-50 rounded-xl flex flex-col items-start p-2 px-3 cursor-pointer"
         @click="emit('open', note.id)"
     >
         <h2 class="text-xl font-bold">{{ note.title }}</h2>
